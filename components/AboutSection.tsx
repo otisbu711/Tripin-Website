@@ -37,7 +37,7 @@ const places = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="min-h-screen flex flex-col justify-center px-8 py-32" style={{ background: '#FFF8F6' }}>
+    <section id="about" className="min-h-screen flex flex-col justify-center px-5 sm:px-8 py-20 sm:py-32" style={{ background: '#FFF8F6' }}>
       <div className="max-w-6xl mx-auto w-full">
 
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -48,7 +48,7 @@ export default function AboutSection() {
               About Tripin
             </p>
 
-            <p className="font-sans text-muted text-xl leading-relaxed mb-16 max-w-xl">
+            <p className="font-sans text-muted text-lg sm:text-xl leading-relaxed mb-12 sm:mb-16 max-w-xl">
               Tripin turns real travel experiences into your next adventure. Share your favourite spots, post honest reviews, discover restaurants, beaches, nightlife, activities and hidden gems, and let the Tripin community guide you to places you will actually want to experience.
             </p>
 

@@ -2,7 +2,7 @@ export default function DownloadSection() {
   return (
     <section
       id="download"
-      className="min-h-screen flex flex-col items-center justify-center px-6 text-center relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center px-5 sm:px-6 py-20 text-center relative overflow-hidden"
       style={{ backgroundColor: '#1A0C0A' }}
     >
       {/* Glows */}
@@ -21,7 +21,15 @@ export default function DownloadSection() {
 
       <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
 
-        <h2 className="font-display text-[clamp(48px,8vw,100px)] leading-[0.92] tracking-tight text-white mb-8">
+        {/* Logo */}
+        <div className="flex items-center gap-3 mb-16 sm:mb-20">
+          <span className="font-display text-6xl sm:text-7xl leading-none tracking-tight text-white">
+            tripin
+          </span>
+          <img src="/pin.png" alt="" aria-hidden="true" className="w-8 h-11 sm:w-10 sm:h-14 object-contain mt-1.5" />
+        </div>
+
+        <h2 className="font-display text-[clamp(40px,8vw,100px)] leading-[0.92] tracking-tight text-white mb-8">
           start your<br />journey.
         </h2>
 
