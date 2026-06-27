@@ -1,4 +1,6 @@
-const sections = [
+type ContentItem = { heading: string; body: string } | { body: string }
+
+const sections: { title: string; content: ContentItem[] }[] = [
   {
     title: '1. Information We Collect',
     content: [
@@ -101,7 +103,7 @@ export default function PrivacyPolicy() {
               <div className="space-y-4">
                 {s.content.map((c, i) => (
                   <div key={i}>
-                    {c.heading && (
+                    {'heading' in c && (
                       <p className="font-sans font-medium text-sm text-foreground mb-1">{c.heading}</p>
                     )}
                     <p className="font-sans text-sm text-muted leading-relaxed"
