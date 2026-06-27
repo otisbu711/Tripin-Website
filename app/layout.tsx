@@ -5,13 +5,17 @@ import './globals.css'
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-dm-sans',
+  display: 'swap',
+  preload: true,
 })
 
 const fraunces = Fraunces({
   subsets: ['latin'],
-  weight: '300',
-  style: 'italic',
+  weight: ['300', '400'],
+  style: ['italic', 'normal'],
   variable: '--font-fraunces',
+  display: 'swap',
+  preload: true,
 })
 
 export const metadata: Metadata = {

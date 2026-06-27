@@ -4,6 +4,15 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Ensure display font always renders italic — matches the Fraunces italic load */
+@layer utilities {
+  .font-display {
+    font-style: italic;
+  }
 }
 
 body {
