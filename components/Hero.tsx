@@ -40,66 +40,59 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Right — floating UI cards */}
-        <div className="hidden lg:block relative shrink-0 w-[380px] h-[480px]">
+        {/* Right — floating visual cards inspired by the app */}
+        <div className="hidden lg:block relative shrink-0 w-[380px] h-[420px]">
 
-          {/* Card 1: Place rating */}
+          {/* Card 1 — bar interior */}
           <div
-            className="float absolute top-0 right-6 w-64 bg-white rounded-2xl p-4 shadow-[0_8px_40px_rgba(26,12,10,0.10)]"
+            className="float absolute top-0 right-4 w-64 rounded-2xl overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.22)]"
             style={{ '--rotate': '2deg' } as React.CSSProperties}
           >
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: '#FAE8E7' }}>🏖️</div>
-              <div>
-                <p className="font-sans font-semibold text-sm text-foreground">Amalfi Coast</p>
-                <p className="font-sans text-xs text-muted">Italy · Beach</p>
+            <div style={{ height: 200, position: 'relative' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=520&h=400&fit=crop&q=80"
+                alt="El Xampanyet bar"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%)' }} />
+              <div style={{ position: 'absolute', top: 10, right: 10, background: '#161620', border: '1px solid #2a2a3a', borderRadius: 8, padding: '4px 9px', display: 'flex', alignItems: 'baseline', gap: 2 }}>
+                <span style={{ color: '#E8614A', fontSize: 13, fontWeight: 700, fontFamily: 'sans-serif' }}>9.2</span>
+                <span style={{ color: '#555', fontSize: 9, fontFamily: 'sans-serif' }}>/10</span>
               </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="font-sans text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: '#FAE8E7', color: '#B5322A' }}>★ 9.2</span>
-              <span className="font-sans text-xs text-muted">unmissable ✦</span>
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 14px' }}>
+                <p style={{ color: '#fff', fontSize: 13, fontWeight: 700, fontFamily: 'sans-serif', margin: 0 }}>El Xampanyet</p>
+                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 10, fontFamily: 'sans-serif', margin: '3px 0 0' }}>Barcelona · bar</p>
+              </div>
             </div>
           </div>
 
-          {/* Card 2: Review snippet */}
+          {/* Card 2 — coastal landmark */}
           <div
-            className="float-delay absolute top-[150px] left-0 w-72 bg-white rounded-2xl p-4 shadow-[0_8px_40px_rgba(26,12,10,0.10)]"
+            className="float-delay absolute top-[230px] left-0 w-60 rounded-2xl overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.20)]"
             style={{ '--rotate': '-1.5deg' } as React.CSSProperties}
           >
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold text-white" style={{ background: '#B5322A' }}>S</div>
-              <div>
-                <p className="font-sans font-medium text-sm text-foreground">@sofia_travels</p>
-                <p className="font-sans text-xs text-muted">2 days ago</p>
+            <div style={{ height: 180, position: 'relative' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=480&h=360&fit=crop&q=80"
+                alt="Positano"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 50%)' }} />
+              <div style={{ position: 'absolute', top: 10, right: 10, background: '#161620', border: '1px solid #2a2a3a', borderRadius: 8, padding: '4px 9px', display: 'flex', alignItems: 'baseline', gap: 2 }}>
+                <span style={{ color: '#E8614A', fontSize: 13, fontWeight: 700, fontFamily: 'sans-serif' }}>9.6</span>
+                <span style={{ color: '#555', fontSize: 9, fontFamily: 'sans-serif' }}>/10</span>
               </div>
-            </div>
-            <p className="font-sans text-sm text-foreground mb-3 leading-relaxed">"Hidden gem — worth every single step."</p>
-            <div className="flex gap-1.5 flex-wrap">
-              <span className="font-sans text-xs px-2 py-0.5 rounded-full" style={{ background: '#F7EAE8', color: '#9B5850' }}>peaceful</span>
-              <span className="font-sans text-xs px-2 py-0.5 rounded-full" style={{ background: '#F7EAE8', color: '#9B5850' }}>hidden gem</span>
-              <span className="font-sans text-xs px-2 py-0.5 rounded-full" style={{ background: '#F7EAE8', color: '#9B5850' }}>scenic</span>
-            </div>
-          </div>
-
-          {/* Card 3: Trip summary */}
-          <div
-            className="float-delay-2 absolute top-[310px] right-2 w-64 bg-white rounded-2xl p-4 shadow-[0_8px_40px_rgba(26,12,10,0.10)]"
-            style={{ '--rotate': '1.5deg' } as React.CSSProperties}
-          >
-            <div className="flex items-center justify-between mb-2">
-              <p className="font-sans font-semibold text-sm text-foreground">Tokyo Summer '25</p>
-              <span className="text-base">🗺️</span>
-            </div>
-            <p className="font-sans text-xs text-muted mb-3">12 moments · 5 places</p>
-            <div className="flex items-center gap-2">
-              <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: '#F7EAE8' }}>
-                <div className="h-full rounded-full" style={{ width: '87%', background: '#B5322A' }} />
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 14px' }}>
+                <p style={{ color: '#fff', fontSize: 13, fontWeight: 700, fontFamily: 'sans-serif', margin: 0 }}>Positano Viewpoint</p>
+                <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 10, fontFamily: 'sans-serif', margin: '3px 0 0' }}>Amalfi Coast · landmark</p>
               </div>
-              <span className="font-sans text-xs font-semibold" style={{ color: '#B5322A' }}>8.7</span>
             </div>
           </div>
 
         </div>
+
       </div>
 
       {/* Scroll indicator */}

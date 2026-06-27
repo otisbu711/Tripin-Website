@@ -4,13 +4,35 @@ const features = [
   { number: '03', title: 'Build Trips', description: 'Group your moments into trips. See your journey on a map. Share it with friends or keep it for yourself.' },
 ]
 
-const categories = [
-  { emoji: '🍜', label: 'Restaurant', rating: 9.1 },
-  { emoji: '🏖️', label: 'Beach', rating: 8.7 },
-  { emoji: '🍸', label: 'Bar', rating: 7.9 },
-  { emoji: '🏨', label: 'Hotel', rating: 8.3 },
-  { emoji: '🎭', label: 'Activity', rating: 9.4 },
-  { emoji: '🌿', label: 'Hidden Gem', rating: 9.8 },
+const places = [
+  {
+    name: 'Shibuya Crossing',
+    location: 'Tokyo, Japan',
+    rating: 9.4,
+    tag: 'landmark',
+    img: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    name: 'Cristo Redentor',
+    location: 'Rio de Janeiro',
+    rating: 9.1,
+    tag: 'bucket-list',
+    img: 'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    name: 'Marina Bay Sands',
+    location: 'Singapore',
+    rating: 9.3,
+    tag: 'rooftop bar',
+    img: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    name: 'Jemaa el-Fna',
+    location: 'Marrakech',
+    rating: 8.8,
+    tag: 'hidden gem',
+    img: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=400&h=300&fit=crop&q=80',
+  },
 ]
 
 export default function AboutSection() {
@@ -43,33 +65,41 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Right — category visual grid */}
+          {/* Right — destination photo grid */}
           <div className="hidden lg:block shrink-0 w-72">
             <div className="grid grid-cols-2 gap-3">
-              {categories.map((c) => (
+              {places.map((p) => (
                 <div
-                  key={c.label}
-                  className="bg-white rounded-2xl p-4 flex flex-col gap-3 shadow-[0_4px_24px_rgba(26,12,10,0.06)] hover:shadow-[0_8px_32px_rgba(26,12,10,0.12)] transition-shadow"
+                  key={p.name}
+                  className="rounded-2xl overflow-hidden relative group shadow-[0_4px_24px_rgba(26,12,10,0.10)] hover:shadow-[0_8px_32px_rgba(26,12,10,0.18)] transition-shadow"
+                  style={{ height: 140 }}
                 >
-                  <span className="text-2xl">{c.emoji}</span>
-                  <div>
-                    <p className="font-sans font-medium text-sm text-foreground mb-2">{c.label}</p>
-                    <div className="flex items-center gap-1.5">
-                      <div className="flex-1 h-1 rounded-full overflow-hidden" style={{ background: '#F7EAE8' }}>
-                        <div
-                          className="h-full rounded-full"
-                          style={{ width: `${(c.rating / 10) * 100}%`, background: '#B5322A' }}
-                        />
-                      </div>
-                      <span className="font-sans text-xs font-semibold" style={{ color: '#B5322A' }}>{c.rating}</span>
-                    </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {/* Overlay */}
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%)' }} />
+                  {/* Rating badge */}
+                  <div
+                    className="absolute top-2 right-2 font-sans text-xs font-semibold px-2 py-0.5 rounded-full flex items-baseline gap-0.5"
+                    style={{ background: 'rgba(181,50,42,0.92)', color: '#fff' }}
+                  >
+                    {p.rating}<span style={{ fontSize: 9, opacity: 0.8 }}>/10</span>
+                  </div>
+                  {/* Place label */}
+                  <div className="absolute bottom-0 left-0 right-0 p-2.5">
+                    <p className="font-sans font-semibold text-xs text-white leading-tight">{p.name}</p>
+                    <p className="font-sans text-[10px] text-white/60">{p.location} · {p.tag}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Community blurb */}
-            <div className="mt-4 bg-white rounded-2xl p-4 shadow-[0_4px_24px_rgba(26,12,10,0.06)]">
+            <div className="mt-3 bg-white rounded-2xl p-4 shadow-[0_4px_24px_rgba(26,12,10,0.06)]">
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex -space-x-2">
                   {['#B5322A', '#4A90C4', '#5CB584', '#C49660'].map((color, i) => (
