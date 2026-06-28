@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["LRMHL79F8B.com.tripin.app"],
+        "components": [
+          {
+            "/": "/trip/*",
+            "comment": "Trip detail pages — open in Tripin app"
+          }
+        ]
+      }
+    ]
+  }
+}

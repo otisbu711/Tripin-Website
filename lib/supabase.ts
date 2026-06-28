@@ -2,11 +2,11 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 let _client: SupabaseClient | null = null
 
-function getClient(): SupabaseClient {
+function getClient(): SupabaseClient | null {
   if (!_client) {
     const url = process.env.SUPABASE_URL
     const key = process.env.SUPABASE_ANON_KEY
-    if (!url || !key) throw new Error('Missing SUPABASE_URL or SUPABASE_ANON_KEY')
+    if (!url || !key) return null
     _client = createClient(url, key)
   }
   return _client
@@ -29,7 +29,9 @@ export type TripPreview = {
 }
 
 export async function getTripPreview(id: string): Promise<TripPreview | null> {
-  const { data, error } = await getClient()
+  const client = getClient()
+  if (!client) return null
+  const { data, error } = await client
     .from('trips')
     .select('id, title, city, country, cover_image_url, trip_rating, start_date, end_date, profile:profiles(username, display_name, avatar_url)')
     .eq('id', id)
