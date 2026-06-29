@@ -10,6 +10,7 @@ export default function Footer() {
           <a href="/#about" className="hover:text-white transition-colors">About</a>
           <a href="/#download" className="hover:text-white transition-colors">Download</a>
           <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+          <a href="/terms" className="hover:text-white transition-colors">Terms</a>
           <a href="/contact" className="hover:text-white transition-colors">Contact</a>
         </div>
         <p className="font-sans text-xs" style={{ color: '#9B5850' }}>
