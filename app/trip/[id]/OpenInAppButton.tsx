@@ -2,20 +2,8 @@
 
 import { useEffect } from 'react'
 
-const FALLBACK_URL = 'https://tripintravelapp.com/#download'
-const TIMEOUT_MS = 1500
-
 function tryOpenApp(tripId: string) {
   window.location.href = `tripin://trip/${tripId}`
-
-  const timer = setTimeout(() => {
-    window.location.href = FALLBACK_URL
-  }, TIMEOUT_MS)
-
-  // If the browser loses focus the app opened — cancel the fallback redirect
-  const cancel = () => { if (document.hidden) clearTimeout(timer) }
-  document.addEventListener('visibilitychange', cancel, { once: true })
-  window.addEventListener('pagehide', () => clearTimeout(timer), { once: true })
 }
 
 export default function OpenInAppButton({ tripId }: { tripId: string }) {
