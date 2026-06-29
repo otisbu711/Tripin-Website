@@ -23,6 +23,7 @@ export default function Navbar() {
           <a href="/#about" className="font-sans text-sm text-muted hover:text-foreground transition-colors">About</a>
           <a href="/#download" className="font-sans text-sm text-muted hover:text-foreground transition-colors">Download</a>
           <a href="/privacy" className="font-sans text-sm text-muted hover:text-foreground transition-colors">Privacy</a>
+          <a href="/terms" className="font-sans text-sm text-muted hover:text-foreground transition-colors">Terms</a>
           <a href="/contact" className="font-sans text-sm text-muted hover:text-foreground transition-colors">Contact</a>
           <a href="/#download" className="font-sans text-sm font-medium bg-coral text-white px-5 py-2.5 rounded-full hover:bg-coral-hover transition-colors">
             Get the app
@@ -47,7 +48,7 @@ export default function Navbar() {
         style={{ background: 'rgba(255,248,246,0.97)', backdropFilter: 'blur(16px)' }}
       >
         <div className="flex flex-col gap-2 flex-1">
-          {[['/#about', 'About'], ['/#download', 'Download'], ['/privacy', 'Privacy'], ['/contact', 'Contact']].map(([href, label]) => (
+          {[['/#about', 'About'], ['/#download', 'Download'], ['/privacy', 'Privacy'], ['/terms', 'Terms'], ['/contact', 'Contact']].map(([href, label]) => (
             <a
               key={href}
               href={href}
