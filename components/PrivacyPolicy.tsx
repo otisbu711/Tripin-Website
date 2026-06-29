@@ -38,11 +38,11 @@ const sections: { title: string; content: ContentItem[] }[] = [
   },
   {
     title: '8. Your Rights',
-    content: [{ body: 'Depending on where you live, you may have the right to access, correct, or delete your personal information; object to or restrict certain processing; request a copy of your data; withdraw consent; or complain to a data protection authority. Contact us at otisbu711@gmail.com to make a request.' }],
+    content: [{ body: 'Depending on where you live, you may have the right to access, correct, or delete your personal information; object to or restrict certain processing; request a copy of your data; withdraw consent; or complain to a data protection authority. Contact us at support@tripintravelapp.com to make a request.' }],
   },
   {
     title: '9. Account and Content Deletion',
-    content: [{ body: 'You may request deletion of your account or certain content by contacting us at otisbu711@gmail.com. We may need to verify your identity first. Some information may be retained for legal, safety, or moderation reasons.' }],
+    content: [{ body: 'You may request deletion of your account or certain content by contacting us at support@tripintravelapp.com. We may need to verify your identity first. Some information may be retained for legal, safety, or moderation reasons.' }],
   },
   {
     title: '10. Children\'s Privacy',
@@ -62,7 +62,7 @@ const sections: { title: string; content: ContentItem[] }[] = [
   },
   {
     title: '14. Contact Us',
-    content: [{ body: 'If you have questions about this Privacy Policy, contact us at otisbu711@gmail.com. Owner: Otis Bullot-Heller · London, United Kingdom.' }],
+    content: [{ body: 'If you have questions about this Privacy Policy, contact us at support@tripintravelapp.com. Owner: Otis Bullot-Heller · London, United Kingdom.' }],
   },
 ]
 
@@ -82,8 +82,8 @@ export default function PrivacyPolicy() {
           <p className="font-sans text-sm text-muted">
             Effective date: 17 June 2026 &nbsp;·&nbsp; App name: Tripin &nbsp;·&nbsp; Owner: Otis Bullot-Heller
             &nbsp;·&nbsp; Contact:{' '}
-            <a href="mailto:otisbu711@gmail.com" className="underline hover:text-coral transition-colors">
-              otisbu711@gmail.com
+            <a href="mailto:support@tripintravelapp.com" className="underline hover:text-coral transition-colors">
+              support@tripintravelapp.com
             </a>
             &nbsp;·&nbsp; London, United Kingdom
           </p>
@@ -109,8 +109,8 @@ export default function PrivacyPolicy() {
                     <p className="font-sans text-sm text-muted leading-relaxed"
                       dangerouslySetInnerHTML={{
                         __html: c.body.replace(
-                          'otisbu711@gmail.com',
-                          '<a href="mailto:otisbu711@gmail.com" class="underline hover:text-coral transition-colors">otisbu711@gmail.com</a>'
+                          'support@tripintravelapp.com',
+                          '<a href="mailto:support@tripintravelapp.com" class="underline hover:text-coral transition-colors">support@tripintravelapp.com</a>'
                         ),
                       }}
                     />
