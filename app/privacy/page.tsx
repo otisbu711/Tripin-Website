@@ -145,6 +145,10 @@ export default function PrivacyPage() {
             <div className="flex flex-wrap gap-6 font-sans text-sm" style={{ color: '#9B5850' }}>
               <span>Effective date: 26 June 2026</span>
               <span>·</span>
+              <a href="https://tripintravelapp.com/privacy" className="hover:text-white transition-colors underline underline-offset-2">
+                tripintravelapp.com/privacy
+              </a>
+              <span>·</span>
               <a href="mailto:support@tripintravelapp.com" className="hover:text-white transition-colors underline underline-offset-2">
                 support@tripintravelapp.com
               </a>
